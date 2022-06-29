@@ -28,7 +28,6 @@ public class Job{
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -36,7 +35,6 @@ public class Job{
     public String getEmployer() {
         return employer;
     }
-
     public void setEmployer(String employer) {
         this.employer = employer;
     }
@@ -44,7 +42,6 @@ public class Job{
     public String getSkills() {
         return skills;
     }
-
     public void setSkills(String skills) {
         this.skills = skills;
     }
