@@ -7,9 +7,9 @@
 
 -- Part 2: Test it with SQL
 
-Select *
-From employer
-Where location = "St Louis";
+SELECT id, name
+FROM employer
+WHERE location = "St Louis";
 
 
 -- Part 3: Test it with SQL
