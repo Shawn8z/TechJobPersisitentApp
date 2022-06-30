@@ -1,6 +1,7 @@
 package org.launchcode.techjobs.persistent.models;
 
 import java.util.ArrayList;
+import java.util.List;
 
 // This is a change made in sandbox.
 
@@ -82,9 +83,39 @@ public class JobData {
                 results.add(job);
             }
 
+
         }
 
         return results;
+    }
+
+
+    public static ArrayList<Job> myFindByColumnAndValue(String column, String value, Iterable<Job> allJobs) {
+        ArrayList<Job> resultList = new ArrayList<>();
+        ArrayList<Job> tempList = new ArrayList<>();
+
+        if (value.toLowerCase().equals("all")){
+            return (ArrayList<Job>) allJobs;
+        }
+
+        if (column.equals("all")){
+            resultList = findByValue(value, allJobs);
+            return resultList;
+        }
+
+        for (Job job : allJobs) {
+
+            for (Skill skill : job.getSkills()) {
+
+                if (skill.getName().toLowerCase().equals(value)) {
+                    resultList.add(job);
+                }
+
+            }
+
+        }
+
+        return resultList;
     }
 
 
