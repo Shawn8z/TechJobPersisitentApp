@@ -7,6 +7,9 @@
   - A web application user can see a list of pre stored techjobs on a database.
   - User can add new jobs to the database.
   - User can search techjobs using keywords.
+  - Each techjob object has:
+    1.  a skill object
+    2.  an employer object
 
 
 
